@@ -1,7 +1,7 @@
 from pyAutoUpdate import lib_installer, file_updater
 
 li = lib_installer(['colorama'])
-fu = file_updater(['example.py'], ['/LINK/'])
+fu = file_updater(['example.py'], ['https://raw.githubusercontent.com/eel-primo/pyAutoUpdate/main/example.py'])
 
 li.install()
 from colorama import Fore
