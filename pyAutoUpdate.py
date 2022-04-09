@@ -46,12 +46,13 @@ class lib_installer:
         return True
 
 class file_updater:
-    def __init__(self, files, path_on_github):
+    def __init__(self, files, path_on_github, update_on_init = False):
         self.files = files
         self.path = path_on_github
-
-        li = lib_installer(['requests'])
-        li.install()      
+        
+        if update_on_init:
+            li = lib_installer(['requests'])
+            li.install()      
         
 
     def _download_file_(self, filepath):
